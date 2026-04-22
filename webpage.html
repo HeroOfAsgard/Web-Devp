@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vj's Webpage</title>
+    <link rel="stylesheet" href="web.css">
+    <style>
+        .container {
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: cornsilk;
+        }
+        .hero-pill {
+            border: 1px solid #555;
+            border-radius: 8px;
+            background-color: beige;
+            color: #555;
+            margin: 5px;
+            padding: 3px 5px 5px;
+            font-size: smaller;
+        }
+        .hero-head {
+            font-size: 3rem;
+        }
+        .word-content {
+            display: inline-flex;  /* REQUIRED: Keeps it in the sentence flow */
+            position: relative;     /* REQUIRED: Anchor for the absolute words */
+            width: 160px;           /* Adjust this so "Operate" fits */
+            height: 1.2em;          /* Matches heading height */
+            vertical-align: bottom; /* Keeps it level with "Helps you" */            
+            overflow: hidden; 
+        }
+        .word {
+            position: absolute;
+            left: 0;
+            width: 100%;            
+            opacity: 0;
+            font-style: italic;            
+            font-family:'Times New Roman', serif;
+            vertical-align: middle;
+            animation: slideFade 4.5s infinite;
+        }
+        @keyframes slideFade {
+        0% {opacity: 0; transform: translateY(50px); }
+        10% {opacity: 1; transform: translateY(0); }
+        30% {opacity: 1; transform: translateY(0); }
+        40% {opacity: 0; transform: translateY(-50px); } 
+        100% {opacity: 0; transform: translateY(-50px); }
+        }
+        .hero-desc {
+            max-width: 500px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .hero-btn {
+            margin: 10px;
+        }
+    </style>    
+</head>
+<body>
+    <header class="nav-header">
+        <nav class="nav-container">
+<!-- This div contains logo -->
+            <div class="logo">
+                <a href="#">DevNest.</a>
+            </div>
+<!-- This ul contains nav links in center -->
+            <ul class="nav-links">
+                <!-- This nav-link contains dropdown menu -->
+                <li class="nav-dropdown"> 
+                    <a href="#">Product v</a>
+                    <ul class="dropdown">
+                        <li><a href="#">DevNest<p>All in one ecosystem.</p></a></li>
+                        <li><a href="#">DevNest Ops<p>Connects your teams.</p></a></li>
+                        <li><a href="#">DevNest Docs<p>Client knowledge hub.</p></a></li>
+                        <li><a href="#">DevNest CRM<p>DevNest Marketing.</p></a></li>
+                    </ul>
+                </li>
+                <!-- This nav-link contains dropdown menu -->
+                <li class="nav-dropdown">
+                    <a href="#">Resources v</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Blog<p>Explore DevNest Blogs.</p></a></li>
+                        <li><a href="#">Case Study<p>Explore our Case Studies.</p></a></li>
+                        <li><a href="#">Contact<p>We are ready to help.</p></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Company</a></li>
+            </ul>
+<!-- This div contains button at right -->
+            <div class="nav-btn">
+                <a href="#" class="btn">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <!-- This box contains small box with info -->
+            <div class="hero-pill">
+                <p>All in one ecosystem for your business.</p>
+            </div>
+            <!-- This box contains main theme of webpage -->
+            <h1 class="hero-head">
+                The platfrom that <br> Helps you
+                <span class="word-content">
+                    <span class="word" style="color: red;">Build</span>
+                    <span class="word" style="color: chocolate; animation-delay: 1.5s;">Scale</span>
+                    <span class="word" style="color: orange; animation-delay: 3s;">Operate</span>
+                </span>
+            </h1>
+            <!-- This box contains description -->
+            <div class="hero-desc">
+                <p>DevNest is a business platform designed to help teams manage marketing, operations, and growth from one workspace.</p>
+            </div>
+            <div class="hero-btn">
+                <a href="#" class="btn">Book a Demo</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section style="background-color: beige; height: 600px; max-width: 1000px; margin: 20px auto;">
+        
+    </section>
+
+    <section style="background-color: lightcyan; height: 600px; max-width: 1000px; margin: 20px auto;">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatem porro quia expedita magnam laboriosam, maxime corporis, ea repellat cupiditate consectetur? Neque repudiandae eligendi obcaecati accusantium ullam, at voluptatibus. Repellat!
+        <br>
+        Maiores facilis facere explicabo quod similique odio modi expedita blanditiis atque. Aspernatur eligendi aperiam repellat temporibus quibusdam totam modi facilis tempore. Fugit fuga placeat quasi, reiciendis neque dicta distinctio recusandae!
+        <br><br>
+        Exercitationem in alias laborum et commodi? Deserunt autem sequi numquam nam natus tempora culpa minima a facilis, dolor quod alias accusantium quaerat sed illum ab, eius nemo temporibus aliquam in!
+    </section>
+    <section style="background-color:lightgrey; height: 600px; max-width: 1000px; margin: 20px auto;">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ut iure, repellendus dignissimos nostrum harum earum enim sed laboriosam eius iste ipsam esse neque, temporibus provident at eum, quisquam totam.
+        <br>
+        Necessitatibus repellat doloribus dolorem facilis corporis optio non nam tempore deserunt delectus iusto exercitationem eum aliquam fugit eius obcaecati, officiis est neque ex. Deleniti inventore qui doloribus sint eum voluptas!
+        <br>
+        Tempore, quibusdam accusamus ipsa eum neque consequatur perspiciatis, dolorum iusto id dolores exercitationem delectus enim saepe soluta veniam, vero molestias impedit veritatis. Soluta nulla explicabo, facilis architecto quasi inventore recusandae?
+        <br>
+        Ullam optio excepturi similique quisquam fuga, aliquid eum, rem vel pariatur expedita recusandae! Vero dolores doloribus dolorem sapiente eligendi sed. Perferendis neque animi maiores dolore expedita doloribus, deserunt modi sint?</p>
+    </section>
+    <section style="background-color: lavender; height: 600px; max-width: 1000px; margin: 20px auto;">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ut iure, repellendus dignissimos nostrum harum earum enim sed laboriosam eius iste ipsam esse neque, temporibus provident at eum, quisquam totam.
+        <br>
+        Necessitatibus repellat doloribus dolorem facilis corporis optio non nam tempore deserunt delectus iusto exercitationem eum aliquam fugit eius obcaecati, officiis est neque ex. Deleniti inventore qui doloribus sint eum voluptas!
+        <br>
+        Tempore, quibusdam accusamus ipsa eum neque consequatur perspiciatis, dolorum iusto id dolores exercitationem delectus enim saepe soluta veniam, vero molestias impedit veritatis. Soluta nulla explicabo, facilis architecto quasi inventore recusandae?</p>        
+    </section>
+</body>
+</html>

@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+.nav-header {
+    background-color: antiquewhite;
+    border-bottom: 2px solid rgb(128, 79, 15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+.logo a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+.nav-links li{
+    margin: 0 15px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: orangered;
+}
+.btn {
+    text-decoration: none;
+    font-weight: bold;
+    color: #555;
+    background-color:beige;
+    padding: 10px 20px 12px;
+    border: 0.25px solid #555;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #555;
+    color: beige;
+}
+.nav-dropdown {
+    position: relative;
+}
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    min-width: 220px;            
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    border-radius: 8px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(10px);
+}
+.nav-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Slides it up into place */
+}
+.dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+.dropdown li a:hover {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+.dropdown li a p {
+    font-size: small;
+    color: chocolate;
+}
