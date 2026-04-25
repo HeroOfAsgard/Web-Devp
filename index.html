@@ -96,7 +96,7 @@
     </header>
 
     <section class="hero">
-        <div class="container">
+        <div class="hero-container">
             <!-- This box contains small box with info -->
             <div class="tag-box">
                 <img class="cup" src="images/cup.png" alt="icon">
@@ -167,6 +167,37 @@
                 <img src="images/TensorFlow.png" alt="Company 8">
             </div>
         </div>
+    </section>
+
+    <section class="team">
+        <h1 class="team-h">Meet Our Team</h1>
+        <div class="container" id="main-container">
+            <div class="left">
+                <div class="wheel-wrapper">
+                    <img class="lft-im" src="images/Picture2.png" alt="spinning wheel">
+                    <img class="logo-center" src="images/Devnest.png" alt="center logo">
+                </div>
+            </div>
+    
+            <div class="right">
+                <div class="bio-data">
+                    <h2 class="bio-h2">The Lead Visionary</h2>
+                    <p class="witty-lines">Turning complex logic into visual poetry.</p>
+                    <ul class="skills">
+                        <li>Aquascping Master</li>
+                        <li>Full Stack Wizard</li>
+                        <li>Hyperrealistic Artist</li>
+                        <li>DevNest Founder</li>
+                    </ul>
+                </div>
+                <img class="rt-im" id="creator-img" src="images/koi.jpg" alt="creator">
+
+                <div id="cursor-box">Click me!</div>
+                
+                <p class="cl-hint">Click the image to know more.</p>
+            </div>
+        </div>
+
     </section>
     
     <section class="news">
@@ -324,6 +355,26 @@
                 Made with ❤️ in DiCA.
             </div>
         </div>
-    </footer>
+    </footer>    
+
+    <script>
+        const cursorBox = document.getElementById('cursor-box');
+        const mainContainer = document.getElementById('main-container');
+        const creatorImg = document.getElementById('creator-img');
+
+        // This tracks the mouse movement
+        document.addEventListener('mousemove', (e) => {
+            // e.clientX, e.clientY Takes mouse movement
+            // And apply those coordinates to our box
+            cursorBox.style.left = e.clientX + 'px';
+            cursorBox.style.top = e.clientY + 'px';
+        });
+
+        // This triggers the image expansion
+        creatorImg.addEventListener('click', () => {
+            mainContainer.classList.toggle('active');
+        });
+
+    </script>
 </body>
 </html>
