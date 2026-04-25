@@ -4,62 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vj's Webpage</title>
-    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="web.css"> <!-- This stylesheet contains header & herostyles -->
+    <link rel="stylesheet" href="web3.css"> <!-- This stylesheet contains services, news & faq styles -->
+
     <style>
-        .container {
-            height: 450px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: cornsilk;
-        }
-        .hero-pill {
-            border: 1px solid #555;
-            border-radius: 8px;
-            background-color: beige;
-            color: #555;
-            margin: 5px;
-            padding: 3px 5px 5px;
-            font-size: smaller;
-        }
-        .hero-head {
-            font-size: 3rem;
-        }
-        .word-content {
-            display: inline-flex;  /* REQUIRED: Keeps it in the sentence flow */
-            position: relative;     /* REQUIRED: Anchor for the absolute words */
-            width: 160px;           /* Adjust this so "Operate" fits */
-            height: 1.2em;          /* Matches heading height */
-            vertical-align: bottom; /* Keeps it level with "Helps you" */            
-            overflow: hidden; 
-        }
-        .word {
-            position: absolute;
-            left: 0;
-            width: 100%;            
-            opacity: 0;
-            font-style: italic;            
-            font-family:'Times New Roman', serif;
-            vertical-align: middle;
-            animation: slideFade 4.5s infinite;
-        }
-        @keyframes slideFade {
-        0% {opacity: 0; transform: translateY(50px); }
-        10% {opacity: 1; transform: translateY(0); }
-        30% {opacity: 1; transform: translateY(0); }
-        40% {opacity: 0; transform: translateY(-50px); } 
-        100% {opacity: 0; transform: translateY(-50px); }
-        }
-        .hero-desc {
-            max-width: 500px;
-            margin: 10px auto;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        .hero-btn {
-            margin: 10px;
-        }
+    .ftr {
+	  background-color: cornsilk;
+	  padding: 10px 0;
+	  display: flex;
+	  justify-content: center;
+	}
+
+	.footer-content {
+	  display: flex;
+	  align-items: center;
+	  gap: 30px; /* spacing between icons and credit */
+	}
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      color: #555;
+      border: 1px solid #555;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .social-icons a:hover {
+      background-color: #d0ebe1;
+      color: #000;
+    }
+
+    .dica-credit {
+      background-color: #b7dacd;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #333;
+    }
     </style>    
 </head>
 <body>
@@ -67,7 +60,9 @@
         <nav class="nav-container">
 <!-- This div contains logo -->
             <div class="logo">
-                <a href="#">DevNest.</a>
+                <a href="#">
+                    <img src="images/Devnest.png" alt="DevNest">DevNest.
+                </a>
             </div>
 <!-- This ul contains nav links in center -->
             <ul class="nav-links">
@@ -103,7 +98,8 @@
     <section class="hero">
         <div class="container">
             <!-- This box contains small box with info -->
-            <div class="hero-pill">
+            <div class="tag-box">
+                <img class="cup" src="images/cup.png" alt="icon">
                 <p>All in one ecosystem for your business.</p>
             </div>
             <!-- This box contains main theme of webpage -->
@@ -125,33 +121,209 @@
         </div>
     </section>
 
+    <section class="services">
+        <div class="serv-txt">
+            <p>Trusted by</p>
+            <h2>600+ Students</h2>
+            <p>⭐⭐⭐⭐⭐ 4.6/5 Average user rating</p>
+        </div>
+        <div class="logo-slider">
+            <div class="logo-track tr-1">
+                <img src="images/logo.png" alt="Company 1">
+                <img src="images/chat-gpt.png" alt="Company 2">
+                <img src="images/powerbi.png" alt="Company 3">
+                <img src="images/html.png" alt="Company 4">
+                <img src="images/css.png" alt="Company 5">
+                <img src="images/java-script.png" alt="Company 6">
+                <img src="images/copilot.png" alt="Company 7">
+                <img src="images/github.png" alt="Company 8">
+                
+                <img src="images/logo.png" alt="Company 1">
+                <img src="images/chat-gpt.png" alt="Company 2">
+                <img src="images/powerbi.png" alt="Company 3">
+                <img src="images/html.png" alt="Company 4">
+                <img src="images/css.png" alt="Company 5">
+                <img src="images/java-script.png" alt="Company 6">
+                <img src="images/copilot.png" alt="Company 7">
+                <img src="images/github.png" alt="Company 8">
+            </div>
+            <div class="logo-track tr-2">
+                <img src="images/python.png" alt="Company 1">
+                <img src="images/c-.png" alt="Company 2">
+                <img src="images/OpenCV.png" alt="Company 3">
+                <img src="images/scikit-learn.png" alt="Company 4">
+                <img src="images/sql.png" alt="Company 5">
+                <img src="images/java.png" alt="Company 6">
+                <img src="images/react.png" alt="Company 7">
+                <img src="images/TensorFlow.png" alt="Company 8">
+                
+                <img src="images/python.png" alt="Company 1">
+                <img src="images/c-.png" alt="Company 2">
+                <img src="images/OpenCV.png" alt="Company 3">
+                <img src="images/scikit-learn.png" alt="Company 4">
+                <img src="images/sql.png" alt="Company 5">
+                <img src="images/java.png" alt="Company 6">
+                <img src="images/react.png" alt="Company 7">
+                <img src="images/TensorFlow.png" alt="Company 8">
+            </div>
+        </div>
+    </section>
+    
+    <section class="news">
+        <div class="news-header">
+            <div class="news-left">
+                <div class="tag-box">
+                    <img class="cup" src="images/cup.png" alt="icon">
+                    <span>News & Insight.</span>
+                </div>
+                <h1>Insights that help you scale smarter</h1>
+            </div>
+            <div class="news-right">
+                <p>Stay ahead with practical frameworks, growth strategies, and operational playbooks for modern teams.</p>
+                <a href="#" class="btn">View all blog</a>
+            </div>
+        </div>
 
-    <section style="background-color: beige; height: 600px; max-width: 1000px; margin: 20px auto;">
-        
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="card-img">
+                    <img src="images/Automation.webp" alt="Person on laptop">
+                </div>
+                <div class="card-content">
+                    <span class="category">Automation</span> • <span class="date">February 15, 2026</span>
+                    <h3>How intelligent automation removes repetitive decisions</h3>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="card-img">
+                    <img src="images/Marketing.webp" alt="A statuette on a desk">
+                </div>
+                <div class="card-content">
+                    <span class="category">Marketing</span> • <span class="date">March 2, 2026</span>
+                    <h3>Discover how to align campaign performance with real pipeline</h3>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="card-img">
+                    <img src="images/Analytics.webp" alt="Hands on a desk with paperwork">
+                </div>
+                <div class="card-content">
+                    <span class="category">Analytics</span> • <span class="date">March 26, 2026</span>
+                    <h3>Why scaling without infrastructure creates bottlenecks</h3>
+                </div>                
+            </div>
+        </div>
     </section>
 
-    <section style="background-color: lightcyan; height: 600px; max-width: 1000px; margin: 20px auto;">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatem porro quia expedita magnam laboriosam, maxime corporis, ea repellat cupiditate consectetur? Neque repudiandae eligendi obcaecati accusantium ullam, at voluptatibus. Repellat!
-        <br>
-        Maiores facilis facere explicabo quod similique odio modi expedita blanditiis atque. Aspernatur eligendi aperiam repellat temporibus quibusdam totam modi facilis tempore. Fugit fuga placeat quasi, reiciendis neque dicta distinctio recusandae!
-        <br><br>
-        Exercitationem in alias laborum et commodi? Deserunt autem sequi numquam nam natus tempora culpa minima a facilis, dolor quod alias accusantium quaerat sed illum ab, eius nemo temporibus aliquam in!
+    <section class="faqs">
+
+        <div class="tag-box">
+            <img class="cup" src="images/cup.png" alt="icon">
+            <span>Questions and Answers</span>
+            </div>
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq-grid">
+            <div class="faq-column">
+                <details name="faq-qn">
+                    <summary>What is DevNest exactly?</summary>
+                    <div class="faq-ans">
+                        DevNest is a unified business platform that combines CRM, marketing, documentation, and automation into one connected ecosystem.
+                    </div>
+                </details>
+            </div>
+            <div class="faq-column">
+                <details name="faq-qn">
+                    <summary>What courses do we offer?</summary>
+                    <div class="faq-ans">
+                        We offer a variety of courses including programming, web development, data science, and soft skills training. Our curriculum is designed to meet industry standards and real-world requirements.
+                    </div>
+                </details>
+            </div>
+            <div class="faq-column">
+                <details name="faq-qn">
+                    <summary>Who can enroll in your courses?</summary>
+                    <div class="faq-ans">
+                        Anyone with a willingness to learn can enroll. Whether you're a beginner, student, or working professional, we have courses tailored to different skill levels.
+                    </div>
+                </details>
+            </div>
+            <div class="faq-column">
+                <details name="faq-qn">
+                    <summary>Are the classes online or offline?</summary>
+                    <div class="faq-ans">
+                        We provide both online and offline classes. You can choose the mode that suits your schedule and learning preference.
+                    </div>
+                </details>
+            </div>
+            <div class="faq-column">
+                <details name="faq-qn">
+                    <summary>Do you provide certificates after course completion?</summary>
+                    <div class="faq-ans">
+                        Yes, we provide a certificate of completion for all our courses, which can help enhance your resume and career opportunities.
+                    </div>
+                </details>
+            </div>
+            <div class="faq-column">
+                <details name="faq-qn">
+                    <summary>Do you offer placement assistance?</summary>
+                    <div class="faq-ans">
+                        Yes, we offer placement support including resume building, interview preparation, and job referrals.
+                    </div>
+                </details>
+            </div>
+            <div class="faq-column">
+                <details name="faq-qn">
+                    <summary>What are the class timings?</summary>
+                    <div class="faq-ans">
+                        We offer flexible timings including weekday and weekend batches to accommodate different schedules.
+                    </div>
+                </details>
+            </div>
+            <div class="faq-column">
+                <details name="faq-qn">
+                    <summary>How can I enroll in a course?</summary>
+                    <div class="faq-ans">
+                        You can enroll through our website by filling out the registration form or by visiting our academy in person.
+                    </div>
+                </details>
+            </div>
+            <div class="faq-column">
+                <details name="faq-qn">
+                    <summary>Do you provide demo classes?</summary>
+                    <div class="faq-ans">
+                        Yes, we offer free demo classes so you can experience our teaching style before enrolling.
+                    </div>
+                </details>
+            </div>
+            <div class="faq-column">
+                <details name="faq-qn">
+                    <summary>What is your fee structure?</summary>
+                    <div class="faq-ans">
+                        Our fees are affordable and vary depending on the course. We also offer installment options for selected programs.
+                    </div>
+                </details>
+            </div>
+        </div>
     </section>
-    <section style="background-color:lightgrey; height: 600px; max-width: 1000px; margin: 20px auto;">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ut iure, repellendus dignissimos nostrum harum earum enim sed laboriosam eius iste ipsam esse neque, temporibus provident at eum, quisquam totam.
-        <br>
-        Necessitatibus repellat doloribus dolorem facilis corporis optio non nam tempore deserunt delectus iusto exercitationem eum aliquam fugit eius obcaecati, officiis est neque ex. Deleniti inventore qui doloribus sint eum voluptas!
-        <br>
-        Tempore, quibusdam accusamus ipsa eum neque consequatur perspiciatis, dolorum iusto id dolores exercitationem delectus enim saepe soluta veniam, vero molestias impedit veritatis. Soluta nulla explicabo, facilis architecto quasi inventore recusandae?
-        <br>
-        Ullam optio excepturi similique quisquam fuga, aliquid eum, rem vel pariatur expedita recusandae! Vero dolores doloribus dolorem sapiente eligendi sed. Perferendis neque animi maiores dolore expedita doloribus, deserunt modi sint?</p>
-    </section>
-    <section style="background-color: lavender; height: 600px; max-width: 1000px; margin: 20px auto;">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ut iure, repellendus dignissimos nostrum harum earum enim sed laboriosam eius iste ipsam esse neque, temporibus provident at eum, quisquam totam.
-        <br>
-        Necessitatibus repellat doloribus dolorem facilis corporis optio non nam tempore deserunt delectus iusto exercitationem eum aliquam fugit eius obcaecati, officiis est neque ex. Deleniti inventore qui doloribus sint eum voluptas!
-        <br>
-        Tempore, quibusdam accusamus ipsa eum neque consequatur perspiciatis, dolorum iusto id dolores exercitationem delectus enim saepe soluta veniam, vero molestias impedit veritatis. Soluta nulla explicabo, facilis architecto quasi inventore recusandae?</p>        
-    </section>
+
+    <footer class="ftr">
+        <div class="footer-content">
+            <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fas fa-copyright"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="tag-box">
+                <img class="cup" src="images/cup.png" alt="icon">
+                Made with ❤️ in DiCA.
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

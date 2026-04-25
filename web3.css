@@ -1,0 +1,129 @@
+/* ---------------------------------------------------------- 
+The next part is styling for services section
+---------------------------------------------------------- */
+.services {
+    display: flex;
+    align-items: center;
+    padding: 0 40px 0;
+    overflow: hidden;
+    background: antiquewhite;
+    border-top: 2px solid rgb(128, 79, 15);
+    border-bottom: 2px solid rgb(128, 79, 15);
+}
+.serv-txt {
+    padding-right: 40px;
+    z-index: 2;
+}
+.logo-slider {
+    flex: 1;            
+    overflow: hidden;
+    position: relative;
+}
+.logo-track {
+    display: flex;
+    width: calc(150px*16);
+    margin: 20px 0;
+}
+.tr-1 {
+    animation: scroll 40s linear infinite;
+}
+.tr-2 {
+    animation: scroll 40s linear infinite reverse;
+}
+.logo-track img {
+    width: 50px;
+    margin: 10px 50px;
+    /* filter: grayscale(100%); */
+    opacity: 0.6;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-150px * 8));
+    }
+}
+/* ---------------------------------------------------------- 
+The next part is styling for news section
+---------------------------------------------------------- */
+.news {
+    background-color: cornsilk;
+    padding: 60px 5% ;
+    border-bottom: 2px solid rgb(128, 79, 15);
+}
+.news-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.news-left {
+    flex: 0 0 30%;
+}
+.news-right {
+    flex: 0 0 35%;
+    text-align: left;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.news-card {
+    background-color: transparent;
+    overflow: hidden;
+}
+.card-img img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+.news-header p {
+    color: #555;
+    margin-bottom: 20px;
+}
+/* ---------------------------------------------------------- 
+The next part is styling for faq section
+---------------------------------------------------------- */
+body{
+            background-color: antiquewhite;
+        }
+        .faqs {
+            max-width: 1000px; 
+            margin: auto; 
+            padding: 60px 0; 
+            text-align: center;
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+            margin: 25px 0;
+
+        }
+        details {
+            background: cornsilk;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+            border-radius: 5px;            
+            padding: 8px 8px 10px ;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        summary {
+            list-style: none;
+            padding: 0 10px 10px ;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-ans {
+            color: #555;
+            font-size: 0.8rem;
+        }

@@ -17,13 +17,22 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 8px 20px;
 }
 .logo a{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
+}
+.logo a img {
+    height: 60px; 
+    width: 60px; 
+    border: 1px solid #555;
+    border-radius: 30px; 
 }
 .nav-links {
     display: flex;
@@ -93,4 +102,69 @@
 .dropdown li a p {
     font-size: small;
     color: chocolate;
+}
+/* ---------------------------------------------------------- 
+The next part is styling for hero section
+---------------------------------------------------------- */
+.container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: cornsilk;
+    padding-bottom: 100px;
+}
+.tag-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: beige;
+    color: #555;
+    margin: 5px;
+    padding: 3px 5px 5px;
+    font-size: smaller;
+}
+.cup {
+    width: 24px;
+    height: 24px;
+}
+.hero-head {
+    font-size: 3rem;
+}
+.word-content {
+    display: inline-flex;  /* REQUIRED: Keeps it in the sentence flow */
+    position: relative;     /* REQUIRED: Anchor for the absolute words */
+    width: 160px;           /* Adjust this so "Operate" fits */
+    height: 1.2em;          /* Matches heading height */
+    vertical-align: bottom; /* Keeps it level with "Helps you" */            
+    overflow: hidden; 
+}
+.word {
+    position: absolute;
+    left: 0;
+    width: 100%;            
+    opacity: 0;
+    font-style: italic;            
+    font-family:'Times New Roman', serif;
+    vertical-align: middle;
+    animation: slideFade 4.5s infinite;
+}
+@keyframes slideFade {
+0% {opacity: 0; transform: translateY(50px); }
+10% {opacity: 1; transform: translateY(0); }
+30% {opacity: 1; transform: translateY(0); }
+40% {opacity: 0; transform: translateY(-50px); } 
+100% {opacity: 0; transform: translateY(-50px); }
+}
+.hero-desc {
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    text-align: center;
+}
+.hero-btn {
+    margin: 10px;
 }
