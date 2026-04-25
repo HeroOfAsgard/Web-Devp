@@ -89,41 +89,159 @@ The next part is styling for news section
 /* ---------------------------------------------------------- 
 The next part is styling for faq section
 ---------------------------------------------------------- */
-body{
-            background-color: antiquewhite;
-        }
-        .faqs {
-            max-width: 1000px; 
-            margin: auto; 
-            padding: 60px 0; 
-            text-align: center;
-        }
-        .faq-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            text-align: left;
-            margin: 25px 0;
 
-        }
-        details {
-            background: cornsilk;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-            border-radius: 5px;            
-            padding: 8px 8px 10px ;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        summary {
-            list-style: none;
-            padding: 0 10px 10px ;
-            cursor: pointer;
-            font-weight: 600;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .faq-ans {
-            color: #555;
-            font-size: 0.8rem;
-        }
+.faqs {
+    max-width: 1000px; 
+    margin: auto; 
+    padding: 60px 0; 
+    text-align: center;
+}
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+    margin: 25px 0;
+
+}
+details {
+    background: cornsilk;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    border-radius: 5px;            
+    padding: 8px 8px 10px ;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+summary {
+    list-style: none;
+    padding: 0 10px 10px ;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-ans {
+    color: #555;
+    font-size: 0.8rem;
+}
+/* ---------------------------------------------------------- 
+The next part is styling for teams section
+---------------------------------------------------------- */
+.team-h {
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 40px 40px 0 40px;
+    font-size: 3rem;
+    } 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 40px 40px;
+}
+.left {
+    max-width: 500px;
+    overflow: hidden;
+    transform: translateX(0);
+    transition: opacity 0.8s ease, transform 0.8s ease; /* This makes both the image fade out  */
+}
+#main-container.active .left { /* when active state fades out the left side */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50px);
+}
+#main-container.active .rt-im { /* When active state changes right image size and moves it to left */
+    transform: translateX(-300%) scale(1.7);
+    z-index: 1000;    
+}
+#main-container.active .bio-data {
+    opacity: 1;
+    transform: translateX(-100px);
+    transform: translateY(-20%);
+    transform: scale(1.7);
+}
+.wheel-wrapper {
+    position: relative;
+    left: -150px;
+    width: 600px;
+    height: 600px;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.lft-im {
+    display: block;
+    animation: spin 30s linear infinite reverse;
+    width: 600px;
+    height: 600px;
+}
+.logo-center {
+    position: absolute;
+    top: 28%; left: 30%;
+    width: 250px; height: 250px;
+    border-radius: 125px;
+    border: 1px solid #555;
+
+}
+.right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+.bio-data {
+    position: absolute;
+    top: 0; left: 0;
+    width: 250px; height: 300px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid #555;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.bio-h2 {
+    font-size: 16px;
+}
+.witty-lines , .skills {
+    font-size: 11px;
+    padding: 8px;
+}
+.rt-im {
+    width: 250px;height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: grab;
+    z-index: 2;
+    transition: transform 0.8s ease-in-out; /* This makes the right image grow but is slower than left image fades out*/
+}
+#creator-img:hover ~ #cursor-box {
+    opacity: 1;
+}
+#cursor-box {
+    position: fixed;
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 8px 16px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 1500;
+}
+.cl-hint { /* Hint fades away */
+    margin-top: 15px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+#main-container.active .cl-hint {
+    opacity: 0;
+}

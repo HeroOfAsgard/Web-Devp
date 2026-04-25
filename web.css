@@ -4,6 +4,13 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
 }
+body{
+    background-color: antiquewhite;
+    zoom: 0.9;
+    overflow-x: hidden;
+    -moz-transform: scale(0.9);
+    -moz-transform-origin: 0 0;
+}
 .nav-header {
     background-color: antiquewhite;
     border-bottom: 2px solid rgb(128, 79, 15);
@@ -106,7 +113,7 @@
 /* ---------------------------------------------------------- 
 The next part is styling for hero section
 ---------------------------------------------------------- */
-.container {
+.hero-container {
     height: 80vh;
     display: flex;
     flex-direction: column;
