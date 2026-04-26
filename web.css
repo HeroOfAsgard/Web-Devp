@@ -9,14 +9,16 @@ body{
     zoom: 0.9;
     overflow-x: hidden;
     -moz-transform: scale(0.9);
+    transform: scale(0.9);
     -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
 }
 .nav-header {
     background-color: antiquewhite;
     border-bottom: 2px solid rgb(128, 79, 15);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 5000;
 }
 .nav-container {
     display: flex;
@@ -114,7 +116,7 @@ body{
 The next part is styling for hero section
 ---------------------------------------------------------- */
 .hero-container {
-    height: 80vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;

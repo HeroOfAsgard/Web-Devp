@@ -50,6 +50,7 @@ The next part is styling for news section
 .news {
     background-color: cornsilk;
     padding: 60px 5% ;
+    border-top: 2px solid rgb(128, 79, 15);
     border-bottom: 2px solid rgb(128, 79, 15);
 }
 .news-header {
@@ -70,12 +71,16 @@ The next part is styling for news section
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
+.news-grid h3 {
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
 .news-card {
     background-color: transparent;
     overflow: hidden;
 }
 .card-img img {
-    width: 350px;
+    width: 410px;
     height: 250px;
     object-fit: cover;
     border-radius: 12px;
@@ -125,14 +130,31 @@ summary {
     color: #555;
     font-size: 0.8rem;
 }
+.faq-quote , .cr-name {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px auto;    
+}
 /* ---------------------------------------------------------- 
 The next part is styling for teams section
 ---------------------------------------------------------- */
+.team {
+    background-color: cornsilk;
+    border-bottom: 2px solid rgb(128, 79, 15);
+}
+.team-quote {
+    text-align: center;
+    font-size: 18px;
+    padding: 60px 0 0;
+    margin-bottom: 0;
+}
 .team-h {
     text-align: center;
     font-weight: 600;
     font-family: 'Times New Roman', Times, serif;
-    margin: 40px 40px 0 40px;
+    padding: 0;
+    margin: 0 40px;
     font-size: 3rem;
     } 
 .container {
@@ -140,7 +162,8 @@ The next part is styling for teams section
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 40px 40px;
+    padding-bottom: 40px;
+    margin: 0 40px;
 }
 .left {
     max-width: 500px;
@@ -197,7 +220,7 @@ The next part is styling for teams section
 .bio-data {
     position: absolute;
     top: 0; left: 0;
-    width: 250px; height: 300px;
+    width: 250px; height: 290px;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
     border: 1px solid #555;
@@ -212,11 +235,20 @@ The next part is styling for teams section
     font-size: 16px;
 }
 .witty-lines , .skills {
-    font-size: 11px;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 8px;
+    list-style: circle;
+}
+.skills{
+    padding-left: 22px;
+}
+.pro-bio {
+    font-size: 9px;
     padding: 8px;
 }
 .rt-im {
-    width: 250px;height: 300px;
+    width: 250px;height: 290px;
     object-fit: cover;
     border-radius: 12px;
     cursor: grab;
